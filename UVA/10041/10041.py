@@ -3,7 +3,7 @@
 # 2 2 4
 # 3 2 4 6
 # 4 2 1 999 5
-
+# python 10041.py < 1.in > 1.out
 num = int(input()) 
 cal_list = []
 for i in range(0, num):

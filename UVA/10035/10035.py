@@ -3,6 +3,7 @@
 # 555 555
 # 123 594
 # 0 0
+# python 10035.py < 1.in > 1.out
 while True:
   line = input()
   line_list = line.split(' ')
