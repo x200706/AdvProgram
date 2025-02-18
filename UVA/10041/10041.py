@@ -3,20 +3,15 @@
 # 2 2 4
 # 3 2 4 6
 # 4 2 1 999 5
-# python 10041.py < 1.in > 1.out
-num = int(input()) 
+num = int(input())
 cal_list = []
 for i in range(0, num):
-  test_group = input()
-  cal_list.append(test_group.split(' '))
+    test_group = input()
+    cal_list.append(list(map(int, test_group.split())))
 
 for e in cal_list:
-  # 取中位數要分奇數偶數
-  mid_index = 0
-  if (int(e[0]) % 2 != 0):
-    mid_index = int(e[0]) // 2
-  else:
-    mid_index = int(e[0]) // 2 - 1
+  mid_index = e[0] // 2
+
   ne_list = e[1:]
   ne_list.sort()
 
