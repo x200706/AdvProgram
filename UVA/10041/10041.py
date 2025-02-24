@@ -9,6 +9,7 @@ for _ in range(num):
     line = list(map(int, input().split()))
     mid_index = line[0] // 2
     ne_list = line[1:]
+    ne_list.sort() # 測試資料有可能鄰居是亂序的= =
     mid = ne_list[mid_index]     
     ans = sum(abs(x - mid) for x in ne_list)
     print(ans)
