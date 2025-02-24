@@ -2,6 +2,8 @@ table = {}
 while True:
     try:
         line_arr = list(map(int, input().split()))
+        a = line_arr[0]
+        b = line_arr[1] # 小心如果宣告一個ori_arr = line_arr時，line_arr.sort() ori_arr的順序也會被改變X_X
         line_arr.sort()
         start = line_arr[0]
         end = line_arr[1]
@@ -24,7 +26,7 @@ while True:
                     n_for_deal = 3 * n_for_deal + 1
             table[i] = time
             max_time = max(time, max_time)
-        print(f'{start} {end} {max_time}')
+        print(f'{a} {b} {max_time}')
     except EOFError:
         break
 
