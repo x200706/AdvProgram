@@ -1,15 +1,13 @@
-table = {}  
+table = {}  # 在這邊才不會被重置
 while True:
     try:
         line_arr = list(map(int, input().split()))
         a = line_arr[0]
         b = line_arr[1] # 小心如果宣告一個ori_arr = line_arr時，line_arr.sort() ori_arr的順序也會被改變X_X
-        line_arr.sort() #TODO 使用sort數組一大就會卡一下欸 改一下吧..
-        start = line_arr[0]
-        end = line_arr[1]
+        # 使用sort數組一大就會卡一下欸
         max_time = 0
         time = 0
-        for i in range(start, end + 1):
+        for i in range(min(a, b), max(a, b) + 1):
             n_for_deal = i
             time = 0
             while True:
