@@ -1,13 +1,15 @@
 table = {}  # 在這邊才不會被重置
 while True:
     try:
-        line_arr = list(map(int, input().split()))
-        a = line_arr[0]
-        b = line_arr[1] # 小心如果宣告一個ori_arr = line_arr時，line_arr.sort() ori_arr的順序也會被改變X_X
+        a, b = map(int, input().split()) # 用arr容易超過記憶體..
+        # 小心如果宣告一個ori_arr = line_arr時，line_arr.sort() ori_arr的順序也會被改變X_X
         # 使用sort數組一大就會卡一下欸
+        original_a, original_b = a, b # 一直用max() min() 也會用太多記憶體
+        if a > b:
+            a, b = b, a
         max_time = 0
         time = 0
-        for i in range(min(a, b), max(a, b) + 1):
+        for i in range(a, b + 1):
             n_for_deal = i
             time = 0
             while True:
@@ -23,8 +25,9 @@ while True:
                 else:
                     n_for_deal = 3 * n_for_deal + 1
             table[i] = time
-            max_time = max(time, max_time)
-        print(f'{a} {b} {max_time}')
+            if time > max_time:
+                max_time = time
+        print(f'{original_a} {original_b} {max_time}')
     except EOFError:
         break
 
