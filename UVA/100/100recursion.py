@@ -1,32 +1,29 @@
-#TODO 來研究遞迴版本
 table = {}
-
 def cal(n):
-    if n in table:
+    n_deal = n
+    if n in table.keys():
         return table[n]
-    if n == 1:
+    elif n == 1:
         return 1
-    if n % 2 == 0:
-        cycle_length = 1 + cal(n // 2)
+    elif n % 2 == 0:
+        n_deal = n // 2
     else:
-        cycle_length = 1 + cal(3 * n + 1)
-    table[n] = cycle_length
-    return cycle_length
+        n_deal = 3 * n + 1
+    table[n] = cal(n_deal) + 1
+    return table[n]
 
 while True:
     try:
-        line = input().strip()
-        if not line:
-            continue
-        a, b = map(int, line.split())
-        original_a, original_b = a, b
+        a, b = map(int, input().split())
+        o_a, o_b = a, b
         if a > b:
             a, b = b, a
-        max_time = 0
+        max_count = 0   
         for i in range(a, b + 1):
-            current_time = cal(i)
-            if current_time > max_time:
-                max_time = current_time
-        print(f'{original_a} {original_b} {max_time}')
+            num_count = cal(i)
+            if num_count > max_count:
+                max_count = num_count
+        print(f'{o_a} {o_b} {max_count}')
     except EOFError:
         break
+# 也能看看https://github.com/jlhung/UVA-Python/blob/master/100%20-%20The%203n%20%2B%201%20problem.py
