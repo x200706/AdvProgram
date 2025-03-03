@@ -15,7 +15,7 @@ def cal(n):
 while True:
     try:
         line = input().strip()
-        if not line:
+        if not line: # 有的測資會空行導致例外發生
             continue
         a, b = map(int, line.split())
         o_a, o_b = a, b
