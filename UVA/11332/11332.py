@@ -9,12 +9,15 @@ def super_sum(n): # 遞迴解
 
 
 while True:
-    line = input().strip()
-    if not line:
-        continue
-    if line == '0':
+    try:
+        line = input().strip()
+        if not line:
+            continue
+        if line == '0':
+            break
+        print(super_sum(line))
+    except EOFError: # 應對domjudge測資問題
         break
-    print(super_sum(line))
 
 # 優秀題解
 # https://github.com/rezwanh001/UVA-Solutions-in-Python/blob/master/11332_Summing_Digits.py while與字串處理
