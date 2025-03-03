@@ -14,7 +14,10 @@ def cal(n):
 
 while True:
     try:
-        a, b = map(int, input().split())
+        line = input().strip()
+        if not line:
+            continue
+        a, b = map(int, line.split())
         o_a, o_b = a, b
         if a > b:
             a, b = b, a
