@@ -29,5 +29,6 @@ while True:
 
 new_arr = rolate(max_len, line_num, temp_arr)
 for i in range(len(new_arr)):
-    print(''.join(new_arr[i]).rstrip())
-#TODO 我測試tab也行啊 好奇怪啊
+    print(''.join(new_arr[i]))
+# 測試tab也行喔~~
+# UVA官網AC了，最後是這篇文章給我的啟發，看來我們遇到一樣的狀況 https://medium.com/@timmy900310/uva-490-rotating-sequence-349525d8f7bf
