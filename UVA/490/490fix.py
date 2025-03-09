@@ -37,3 +37,4 @@ for i in range(len(new_arr)):
     print(''.join(new_arr[i]))
 # 測試tab也行喔~~
 # UVA官網AC了，最後是這篇文章給我的啟發，看來我們遇到一樣的狀況 https://medium.com/@timmy900310/uva-490-rotating-sequence-349525d8f7bf
+# 20250309更：我看到這位大大的解法 也太易讀了吧!! https://github.com/yuusukealmal/CPE/blob/main/CPE49/UVA490.py

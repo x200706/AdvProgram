@@ -6,6 +6,7 @@ line_num = 0 # 原本的j 處理後會變成新陣列i
 def rolate(max_len, line_num, arr):
     # 要正確初始化新陣列避免index out of range
     new_arr = [[] * line_num for _ in range(max_len)]
+    #TODO 我到現在可能還是不清楚WA的原因..
     for i in range(line_num): # 0~1
         for j in reversed(range(max_len)): # 25~0
             if j >= len(arr[i]):
@@ -29,5 +30,5 @@ while True:
 
 new_arr = rolate(max_len, line_num, temp_arr)
 for i in range(len(new_arr)):
-    print(''.join(new_arr[i]).rstrip())
+    print(''.join(new_arr[i]))
 # 是說Python程式有問題也不一定會拋例外欸......
