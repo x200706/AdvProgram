@@ -25,6 +25,8 @@ while True:
         for e in ans:
             print(e, end = '')
         print('')
+        # 解包寫法就不用這麼多行了
+        # print(*ans, sep='')
 
     except EOFError:
         break
