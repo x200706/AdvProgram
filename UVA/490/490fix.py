@@ -16,6 +16,11 @@ def rolate(max_len, line_num, arr):
 
 while True:
     try:
+        # 1.輸入
+        # 2.輸入的格式
+            # 1. 讀取陣列結果並整理
+            # 2. ry
+        # 3.印出結果
         line = input()
         if line == '':  # 如果輸入是空行，跳過
             continue
