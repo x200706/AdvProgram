@@ -4,8 +4,8 @@ week_day = ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 
 num = int(input())
 
 for _ in range(num):
-    mon, day = map(int, input().split())
-    day_from_start = day
-    for i in range(mon - 1):
-        day_from_start += months_day[i]
-    print(week_day[(day_from_start - 1) % 7])
+    m, d = map(int, input().split())
+    days = d
+    for i in range(m - 1):
+        days += months_day[i]
+    print(week_day[(days - 1) % 7])
