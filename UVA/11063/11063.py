@@ -11,7 +11,7 @@ while True:
 
         flag = True #HINT 旗子不要一直插錯位置rrr
         #HINT 條件一：數列前項小於等於後項
-        for i in range(n - 1): #TODO 了解這邊為甚麼錯..
+        for i in range(n - 1): #TODO 了解這邊為甚麼原本寫法是錯的..
             if (arr[i] >= arr[i + 1]) or (arr[i] < 1): # 總之就是要把題目的數列限制寫成condition
                 flag = False
                 break
