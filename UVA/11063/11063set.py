@@ -22,14 +22,14 @@ while True:
             continue
 
         # 條件二：所有相加的可能不能出現一樣的數字
-        cal_arr = set()
+        cal_set = set()
         for i in range(n):
             for j in range(i, n):
                 su = arr[i] + arr[j]
-                if su in cal_arr:
+                if su in cal_set:
                     flag = False
                     break
-                cal_arr.add(su)
+                cal_set.add(su)
             if not flag:
                 break
 
