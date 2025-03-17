@@ -1,17 +1,19 @@
 n = int(input())
 for I in range(n):
     arr = []
-    ma_n = int(list(input().split())[2])
-    for i in range(ma_n):
+    matrix_n = int(list(input().split())[2])
+    flag = True 
+    for i in range(matrix_n):
         arr.extend(list(map(int, input().split()))) # https://blog.csdn.net/m0_51713294/article/details/112389296
-    flag = True
+    reversed_arr = list(reversed(arr))
 
-    for e in arr:
-        for r_e in list(reversed(arr)):
-            print(f'{e} {r_e}')
-            if e != r_e: # 這附近代碼怪怪的
-                flag = False
-                break
+
+    # 不用巢狀迴圈啦 亂跑一通@@|||...
+    for i in range(len(arr)):
+        #HINT 題目只接受元素為非負數陣列
+        if (arr[i] != reversed_arr[i]) or (arr[i] < 0) or (reversed_arr[i] < 0):
+            flag = False
+            break
 
     if flag is True:
         ans = 'Symmetric'
