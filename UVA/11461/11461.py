@@ -1,1 +1,2 @@
-#TODO 看看DP解
+# 直接算好像也不會timeout...？ https://github.com/jlhung/UVA-Python/blob/master/11461%20-%20Square%20Numbers.py
+# 不一定要dp見下 https://github.com/rezwanh001/UVA-Solutions-in-Python/blob/master/11461%20-%20Square%20Numbers.py
