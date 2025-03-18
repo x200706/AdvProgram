@@ -11,13 +11,8 @@ while True:
 
         flag = True
         # 條件一：數列前項小於等於後項
-        for i in range(n - 1):
-            if arr[i] >= arr[i + 1] or arr[i] < 1:
-                flag = False
-                break
-        if not flag:
-            ans = 'It is not a B2-Sequence.'
-            print(f'Case #{I}: {ans}')
+        if arr[0] < 1 or any(arr[i] <= arr[i - 1] for i in range(1, n)):  
+            print(f"Case #{I}: It is not a B2-Sequence.")
             I += 1
             continue
 
