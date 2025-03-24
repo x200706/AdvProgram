@@ -26,9 +26,9 @@ while True:
                 break
 
         if flag == True:
-            print(f' Case #{count}: It is a B2-Sequence.')
+            print(f'Case #{count}: It is a B2-Sequence.')
         else:
-            print(f' Case #{count}: It is not a B2-Sequence')
+            print(f'Case #{count}: It is not a B2-Sequence')
         count += 1
     except EOFError:
         break
