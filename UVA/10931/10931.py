@@ -15,11 +15,12 @@ def num_to_binary_and_rtn_1(n):
     return binary, one
 
 while True:
-    try:
-        line = int(input())
-        if not line:
-            continue
-        binary, one_num = num_to_binary_and_rtn_1(line)
-        print(f'The parity of {''.join(binary)} is {one_num} (mod2).')
-    except EOFError:
+    line = int(input())
+    if line == 0:
         break
+    if not line:
+        continue
+
+    binary, one_num = num_to_binary_and_rtn_1(line)
+    bunary_str = ''.join(binary)
+    print(f'The parity of {bunary_str} is {one_num} (mod 2).')
