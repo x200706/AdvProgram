@@ -14,11 +14,11 @@ for _ in range(T):
     
     days = [False] * (N + 1)
     
+    # 我這是窮舉，如果有兩個正如果有兩個政黨分別是隔2天跟4天罷工 那算2天就涵蓋了<-題目認為只要一天有一個黨罷工就算浪費了
     for hi in h:
         # 生成所有罷工天數
         for j in range(hi, N + 1, hi):
-            # 檢查是否為週六或週日（一週 7 天，餘數 6 是週六，0 是週日）
-            if j % 7 != 6 and j % 7 != 0:
+            if j % 7 != 6 and j % 7 != 0: # 非週末
                 days[j] = True
     
     hartal_days = sum(days)
