@@ -28,4 +28,4 @@ for _ in range(I):
         current = hold
     print(' '.join(map(str, ans)))
     
-# sFYI: https://blog.iddle.dev/public/2024/04/06/Python-UVa-10415-Eb-Alto-Saxophone-Player/
+# FYI: https://blog.iddle.dev/public/2024/04/06/Python-UVa-10415-Eb-Alto-Saxophone-Player/
